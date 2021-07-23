@@ -11,10 +11,6 @@
       }
   ],
   "routes": [
-      {
-          "src": "/", 
-          "dest": "/views/index.html"
-      },
       { 
           "src": "/(.+js|.+css|.+png|.+ico|robots.txt)", 
           "dest": "/public/$1"
