@@ -10,7 +10,7 @@
           "use": "@vercel/static"
       },
       {
-          "src": "./views/**",
+          "src": "./views/index.html",
           "use": "@vercel/static"
       }
   ],
