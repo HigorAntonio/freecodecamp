@@ -6,6 +6,7 @@
 'use strict';
 
 var fs = require('fs');
+var path = require('path');
 var express = require('express');
 var app = express();
 
@@ -35,7 +36,21 @@ app.route('/_api/package.json')
   
 app.route('/')
     .get(function(req, res) {
-		  res.sendFile(process.cwd() + '/views/index.html');
+		  // res.sendFile(process.cwd() + '/views/index.html');
+      //joining path of directory 
+const directoryPath = path.join(__dirname);
+//passsing directoryPath and callback function
+fs.readdir(directoryPath, function (err, files) {
+    //handling error
+    if (err) {
+        return console.log('Unable to scan directory: ' + err);
+    } 
+    //listing all files using forEach
+    files.forEach(function (file) {
+        // Do whatever you want to do with the file
+        console.log(file); 
+    });
+});
     })
 
 // Respond not found to all the wrong routes
