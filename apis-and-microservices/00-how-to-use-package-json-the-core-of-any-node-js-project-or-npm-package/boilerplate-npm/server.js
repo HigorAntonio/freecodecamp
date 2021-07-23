@@ -38,7 +38,7 @@ app.route('/')
     .get(function(req, res) {
 		  // res.sendFile(process.cwd() + '/views/index.html');
       //joining path of directory 
-      const directoryPath = path.join(__dirname);
+      const directoryPath = process.cwd();
       const files = [];
       //passsing directoryPath and callback function
       fs.readdir(directoryPath, function (err, files) {
