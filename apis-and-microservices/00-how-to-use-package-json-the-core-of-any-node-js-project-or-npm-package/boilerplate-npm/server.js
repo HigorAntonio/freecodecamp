@@ -35,7 +35,7 @@ app.route('/_api/package.json')
   
 app.route('/')
     .get(function(req, res) {
-		  res.sendFile('/apis-and-microservices/00-how-to-use-package-json-the-core-of-any-node-js-project-or-npm-package/boilerplate-npm/views/index.html');
+		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
 // Respond not found to all the wrong routes
