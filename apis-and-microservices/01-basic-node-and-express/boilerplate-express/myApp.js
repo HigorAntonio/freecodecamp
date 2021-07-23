@@ -1,4 +1,6 @@
 var express = require('express');
+var currentTimeMiddleware = require('./middlewares/currentTimeMiddleware');
+
 var app = express();
 
 console.log("Hello World")
@@ -20,4 +22,7 @@ app.get('/json', (req, res) => {
   res.json({ message });
 });
 
+app.get('/now', currentTimeMiddleware, (req, res) => {
+  res.json({ time: req.time });
+});
  module.exports = app;
