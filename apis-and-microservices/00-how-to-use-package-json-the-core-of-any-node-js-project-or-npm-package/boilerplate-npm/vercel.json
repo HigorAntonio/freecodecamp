@@ -13,7 +13,7 @@
   "routes": [
       {
           "src": "/", 
-          "dest": "/public/index.html"
+          "dest": "/views/index.html"
       },
       { 
           "src": "/(.+js|.+css|.+png|.+ico|robots.txt)", 
