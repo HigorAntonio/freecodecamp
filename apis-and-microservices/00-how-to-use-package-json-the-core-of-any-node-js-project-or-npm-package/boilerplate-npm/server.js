@@ -35,7 +35,7 @@ app.route('/_api/package.json')
   
 app.route('/')
     .get(function(req, res) {
-		  res.sendFile('/views/index.html', { root: '.' });
+		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
 // Respond not found to all the wrong routes
